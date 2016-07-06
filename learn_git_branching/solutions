@@ -39,7 +39,31 @@ git reset HEAD^
 git checkout pushed
 git revert HEAD
 ------------
+Moving Work Around
 ------------
+1
+git cherry-pick C3 C4 C7
+------------
+2
+git rebase -i overHere
+------------
+A Mixed Bag
+------------
+1
+------------
+2
+------------
+3
+------------
+4
+------------
+Advanced Topics
+------------
+1
+------------
+2
+------------
+3
 ------------
 ------------
 ------------
