@@ -1,0 +1,21 @@
+1
+git commit
+git commit
+------------
+2
+git checkout -b bugFix
+------------
+3
+git checkout -b bugFix
+git commit
+git checkout master
+git commit
+git merge bugFix
+------------
+4
+git checkout -b bugFix
+git commit
+git checkout master
+git commit
+git rebase master bugFix
+------------
