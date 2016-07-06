@@ -79,11 +79,20 @@ git commit
 Advanced Topics
 ------------
 1
-
+git rebase master bugFix
+git rebase bugFix side
+git rebase side another
+git branch -f master HEAD
 ------------
 2
+git branch bugWork HEAD~^2~
 ------------
 3
+git checkout one
+git cherry-pick C4 C3 C2
+git checkout two
+git cherry-pick C5 C4 C3 C2
+git branch -f three master~3
 ------------
 ------------
 ------------
