@@ -130,3 +130,48 @@ git pull --rebase
 git push
 ------------
 To Origin and Beyond -- Advanced Git Remotes!
+------------
+1
+git fetch
+git rebase o/master side1
+git rebase side1 side2
+git rebase side2 side3
+git rebase side3 master
+git push
+------------
+2
+git checkout master
+git pull
+git merge side1
+git merge side2
+git merge side3
+git push
+------------
+3
+git checkout -b side o/master
+git commit
+git pull --rebase
+git push
+------------
+4
+git push origin foo
+git push origin master
+------------
+5
+git push origin master^:foo
+git push origin foo:master
+------------
+6
+git fetch origin master^:foo
+git fetch origin foo:master
+git checkout foo
+git merge master
+------------
+7
+git push origin :foo
+git fetch origin :bar
+------------
+8
+git pull origin bar:foo
+git pull origin master:side
+------------
