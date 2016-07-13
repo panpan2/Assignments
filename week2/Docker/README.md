@@ -4,11 +4,11 @@
 [Install Docker Engine Documentation](https://docs.docker.com/engine/installation/)
 
 ### Running the script
-*Build Docker image:*
+*Build Docker Image:*
 ```bash
 docker build -t hello .
 ```
-*Run Docker Image:*
+*Run command in Docker Container:*
 ```bash
 docker run -it --rm --name my-running-app hello
 ```
