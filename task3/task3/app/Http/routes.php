@@ -12,9 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('register');
 });
 
-Route::get('/users', function () {
-    return View::make('users');
+Route::get('/thankyou', function () {
+    return view('thankyou');
 });
