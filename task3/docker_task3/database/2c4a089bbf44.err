@@ -1,0 +1,93 @@
+160715 10:55:54 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+2016-07-15 10:55:54 140577775909928 [Note] Using unique option prefix 'key_buffer' is error-prone and can break in the future. Please use the full name 'key_buffer_size' instead.
+2016-07-15 10:55:54 140577775909928 [Note] /usr/bin/mysqld (mysqld 10.1.12-MariaDB) starting as process 142 ...
+2016-07-15 10:55:54 140577775909928 [Note] Using unique option prefix 'myisam-recover' is error-prone and can break in the future. Please use the full name 'myisam-recover-options' instead.
+2016-07-15 10:55:54 140577775909928 [Note] InnoDB: Using mutexes to ref count buffer pool pages
+2016-07-15 10:55:54 140577775909928 [Note] InnoDB: The InnoDB memory heap is disabled
+2016-07-15 10:55:54 140577775909928 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2016-07-15 10:55:54 140577775909928 [Note] InnoDB: Memory barrier is not used
+2016-07-15 10:55:54 140577775909928 [Note] InnoDB: Compressed tables use zlib 1.2.8
+2016-07-15 10:55:54 140577775909928 [Note] InnoDB: Using Linux native AIO
+2016-07-15 10:55:54 140577775909928 [Note] InnoDB: Using SSE crc32 instructions
+2016-07-15 10:55:54 140577775909928 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2016-07-15 10:55:54 140577775909928 [Note] InnoDB: Completed initialization of buffer pool
+2016-07-15 10:55:54 140577775909928 [Note] InnoDB: Highest supported file format is Barracuda.
+2016-07-15 10:55:54 140577775909928 [Note] InnoDB: The log sequence numbers 1616829 and 1616829 in ibdata files do not match the log sequence number 1616869 in the ib_logfiles!
+2016-07-15 10:55:54 140577775909928 [Note] InnoDB: Database was not shutdown normally!
+2016-07-15 10:55:54 140577775909928 [Note] InnoDB: Starting crash recovery.
+2016-07-15 10:55:54 140577775909928 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2016-07-15 10:55:54 140577775909928 [Note] InnoDB: Restoring possible half-written data pages 
+2016-07-15 10:55:54 140577775909928 [Note] InnoDB: from the doublewrite buffer...
+2016-07-15 10:55:54 140577775909928 [Note] InnoDB: 128 rollback segment(s) are active.
+2016-07-15 10:55:54 140577775909928 [Note] InnoDB: Waiting for purge to start
+2016-07-15 10:55:54 140577775909928 [Note] InnoDB:  Percona XtraDB (http://www.percona.com) 5.6.28-76.1 started; log sequence number 1616869
+2016-07-15 10:55:55 140577542904496 [Note] InnoDB: Dumping buffer pool(s) not yet started
+2016-07-15 10:55:55 140577775909928 [Note] Plugin 'FEEDBACK' is disabled.
+2016-07-15 10:55:55 140577775909928 [Note] Recovering after a crash using tc.log
+2016-07-15 10:55:55 140577775909928 [Note] Starting crash recovery...
+2016-07-15 10:55:55 140577775909928 [Note] Crash recovery finished.
+2016-07-15 10:55:55 140577775909928 [Note] Server socket created on IP: '0.0.0.0'.
+2016-07-15 10:55:55 140577775909928 [Note] /usr/bin/mysqld: ready for connections.
+Version: '10.1.12-MariaDB'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MariaDB Server
+160715 11:02:47 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+2016-07-15 11:02:47 139779475864616 [Note] Using unique option prefix 'key_buffer' is error-prone and can break in the future. Please use the full name 'key_buffer_size' instead.
+2016-07-15 11:02:47 139779475864616 [Note] /usr/bin/mysqld (mysqld 10.1.12-MariaDB) starting as process 139 ...
+2016-07-15 11:02:47 139779475864616 [Note] Using unique option prefix 'myisam-recover' is error-prone and can break in the future. Please use the full name 'myisam-recover-options' instead.
+2016-07-15 11:02:47 139779475864616 [Note] InnoDB: Using mutexes to ref count buffer pool pages
+2016-07-15 11:02:47 139779475864616 [Note] InnoDB: The InnoDB memory heap is disabled
+2016-07-15 11:02:47 139779475864616 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2016-07-15 11:02:47 139779475864616 [Note] InnoDB: Memory barrier is not used
+2016-07-15 11:02:47 139779475864616 [Note] InnoDB: Compressed tables use zlib 1.2.8
+2016-07-15 11:02:47 139779475864616 [Note] InnoDB: Using Linux native AIO
+2016-07-15 11:02:47 139779475864616 [Note] InnoDB: Using SSE crc32 instructions
+2016-07-15 11:02:47 139779475864616 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2016-07-15 11:02:48 139779475864616 [Note] InnoDB: Completed initialization of buffer pool
+2016-07-15 11:02:48 139779475864616 [Note] InnoDB: Highest supported file format is Barracuda.
+2016-07-15 11:02:48 139779475864616 [Note] InnoDB: The log sequence numbers 1616829 and 1616829 in ibdata files do not match the log sequence number 1616879 in the ib_logfiles!
+2016-07-15 11:02:48 139779475864616 [Note] InnoDB: Database was not shutdown normally!
+2016-07-15 11:02:48 139779475864616 [Note] InnoDB: Starting crash recovery.
+2016-07-15 11:02:48 139779475864616 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2016-07-15 11:02:48 139779475864616 [Note] InnoDB: Restoring possible half-written data pages 
+2016-07-15 11:02:48 139779475864616 [Note] InnoDB: from the doublewrite buffer...
+2016-07-15 11:02:48 139779475864616 [Note] InnoDB: 128 rollback segment(s) are active.
+2016-07-15 11:02:48 139779475864616 [Note] InnoDB: Waiting for purge to start
+2016-07-15 11:02:48 139779475864616 [Note] InnoDB:  Percona XtraDB (http://www.percona.com) 5.6.28-76.1 started; log sequence number 1616879
+2016-07-15 11:02:48 139779242859184 [Note] InnoDB: Dumping buffer pool(s) not yet started
+2016-07-15 11:02:48 139779475864616 [Note] Plugin 'FEEDBACK' is disabled.
+2016-07-15 11:02:48 139779475864616 [Note] Recovering after a crash using tc.log
+2016-07-15 11:02:48 139779475864616 [Note] Starting crash recovery...
+2016-07-15 11:02:48 139779475864616 [Note] Crash recovery finished.
+2016-07-15 11:02:48 139779475864616 [Note] Server socket created on IP: '0.0.0.0'.
+2016-07-15 11:02:48 139779475864616 [Note] /usr/bin/mysqld: ready for connections.
+Version: '10.1.12-MariaDB'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MariaDB Server
+160715 11:04:54 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+2016-07-15 11:04:54 139783405599784 [Note] Using unique option prefix 'key_buffer' is error-prone and can break in the future. Please use the full name 'key_buffer_size' instead.
+2016-07-15 11:04:54 139783405599784 [Note] /usr/bin/mysqld (mysqld 10.1.12-MariaDB) starting as process 139 ...
+2016-07-15 11:04:54 139783405599784 [Note] Using unique option prefix 'myisam-recover' is error-prone and can break in the future. Please use the full name 'myisam-recover-options' instead.
+2016-07-15 11:04:54 139783405599784 [Note] InnoDB: Using mutexes to ref count buffer pool pages
+2016-07-15 11:04:54 139783405599784 [Note] InnoDB: The InnoDB memory heap is disabled
+2016-07-15 11:04:54 139783405599784 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2016-07-15 11:04:54 139783405599784 [Note] InnoDB: Memory barrier is not used
+2016-07-15 11:04:54 139783405599784 [Note] InnoDB: Compressed tables use zlib 1.2.8
+2016-07-15 11:04:54 139783405599784 [Note] InnoDB: Using Linux native AIO
+2016-07-15 11:04:54 139783405599784 [Note] InnoDB: Using SSE crc32 instructions
+2016-07-15 11:04:54 139783405599784 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2016-07-15 11:04:54 139783405599784 [Note] InnoDB: Completed initialization of buffer pool
+2016-07-15 11:04:54 139783405599784 [Note] InnoDB: Highest supported file format is Barracuda.
+2016-07-15 11:04:54 139783405599784 [Note] InnoDB: The log sequence numbers 1616829 and 1616829 in ibdata files do not match the log sequence number 1616889 in the ib_logfiles!
+2016-07-15 11:04:54 139783405599784 [Note] InnoDB: Database was not shutdown normally!
+2016-07-15 11:04:54 139783405599784 [Note] InnoDB: Starting crash recovery.
+2016-07-15 11:04:54 139783405599784 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2016-07-15 11:04:54 139783405599784 [Note] InnoDB: Restoring possible half-written data pages 
+2016-07-15 11:04:54 139783405599784 [Note] InnoDB: from the doublewrite buffer...
+2016-07-15 11:04:54 139783405599784 [Note] InnoDB: 128 rollback segment(s) are active.
+2016-07-15 11:04:54 139783405599784 [Note] InnoDB: Waiting for purge to start
+2016-07-15 11:04:54 139783405599784 [Note] InnoDB:  Percona XtraDB (http://www.percona.com) 5.6.28-76.1 started; log sequence number 1616889
+2016-07-15 11:04:55 139783172594352 [Note] InnoDB: Dumping buffer pool(s) not yet started
+2016-07-15 11:04:55 139783405599784 [Note] Plugin 'FEEDBACK' is disabled.
+2016-07-15 11:04:55 139783405599784 [Note] Recovering after a crash using tc.log
+2016-07-15 11:04:55 139783405599784 [Note] Starting crash recovery...
+2016-07-15 11:04:55 139783405599784 [Note] Crash recovery finished.
+2016-07-15 11:04:55 139783405599784 [Note] Server socket created on IP: '0.0.0.0'.
+2016-07-15 11:04:55 139783405599784 [Note] /usr/bin/mysqld: ready for connections.
+Version: '10.1.12-MariaDB'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MariaDB Server
