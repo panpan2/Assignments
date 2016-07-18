@@ -14,10 +14,10 @@ class UserController extends Controller {
      *
      */
     public function postRegister() {
-        $user = new User;
+        $user = new User();
         $user->email = $_POST["email"];
         $user->name = $_POST["name"];
         $user->save();
-        return view('thankyou');
+        return redirect('thankyou');
     }
 }
