@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class UserController extends Controller {
     /**
@@ -13,10 +14,15 @@ class UserController extends Controller {
      * "Thank you" page
      *
      */
-    public function postRegister() {
+    public function postRegister(Request $request) {
+        $this->validate($request, [
+            'name' => 'required|max:255|string|alpha',
+            'email' => 'required|unique:users,email|max:255|string|email',
+        ]);
+        // user data is valid
         $user = new User();
-        $user->email = $_POST["email"];
-        $user->name = $_POST["name"];
+        $user->email = $request->email;
+        $user->name = $request->name;
         $user->save();
         return redirect('thankyou');
     }
