@@ -6,7 +6,7 @@
         <form action=" {{ route('register_user') }}", method="post">
             Name: <input type="text" name="name"><br>
             Email: <input type="text" name="email"><br>
-            <input type="submit" value="Register">
+            <input type="submit" name="registerButton" value="Register">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
         </form>
         @if (count($errors) > 0)
