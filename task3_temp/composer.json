@@ -1,0 +1,38 @@
+{
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "selenium/seleniumserver",
+        "version": "2.46.0",
+        "dist": {
+          "url": "http://selenium-release.storage.googleapis.com/2.46/selenium-server-standalone-2.46.0.jar",
+          "type": "file"
+        }
+      }
+    }
+  ],
+
+  "require": {
+
+      "php": ">=5.4.0",
+
+      "behat/behat": "~3.1",
+
+      "behat/mink": "*",
+      "behat/mink-extension": "*",
+      "behat/mink-selenium2-driver": "*",
+      "emuse/behat-html-formatter": "dev-master",
+
+      "phpunit/phpunit": "~4.7",
+
+      "selenium/seleniumserver": "~2.46"
+  },
+
+  "require-dev": {
+        "behat/behat": "^3.1",
+        "behat/mink": "^1.7",
+        "behat/mink-extension": "^2.2",
+        "laracasts/behat-laravel-extension": "^1.0"
+  }
+}
