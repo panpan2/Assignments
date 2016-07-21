@@ -1,9 +1,0 @@
-  behat:
-    image: tvial/behat
-    command: /home/behat/behat
-    volumes:
-      - ./www:/var/www
-    networks:
-      - back-tier
-
-
