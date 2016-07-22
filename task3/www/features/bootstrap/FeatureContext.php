@@ -39,19 +39,11 @@ class FeatureContext extends MinkContext implements Context, SnippetAcceptingCon
     }
 
     /**
-     * @When you try to register
+     * @When I try to register
      */
-    public function youTryToRegister()
+    public function iTryToRegister()
     {
         $this->pressButton('registerButton');
     }
 
-
-    /**
-     * @Then you remain on the homepage
-     */
-    public function youRemainOnTheHomepage()
-    {
-        throw new PendingException();
-    }
 }
