@@ -6,7 +6,8 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class UserController extends Controller {
+class UserController extends Controller
+{
     /**
      *
      * Responds to requests to POST /register
@@ -14,11 +15,14 @@ class UserController extends Controller {
      * "Thank you" page
      *
      */
-    public function postRegister(Request $request) {
-        $this->validate($request, [
+    public function postRegister(Request $request)
+    {
+        $this->validate(
+            $request, [
             'name' => 'required|max:255|string|alpha',
             'email' => 'required|unique:users,email|max:255|string|email',
-        ]);
+            ]
+        );
         // user data is valid
         $user = new User();
         $user->email = $request->email;

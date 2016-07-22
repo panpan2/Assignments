@@ -11,23 +11,31 @@
 |
 */
 
-Route::get('/', function () {
-    return view('register');
-});
-
-Route::get('/thankyou', function () {
-    return view('thankyou');
-});
-
-Route::get('/users', function() {
-    $users = DB::table('users')->get();
-    echo "<p>USERS:</p>";
-    echo "<p>----------</p>";
-    foreach ($users as $user) {
-        echo "<p>$user->name |  $user->email</p>";
+Route::get(
+    '/', function () {
+        return view('register');
     }
-});
+);
 
-Route::post('/register_user', [
+Route::get(
+    '/thankyou', function () {
+        return view('thankyou');
+    }
+);
+
+Route::get(
+    '/users', function () {
+        $users = DB::table('users')->get();
+        echo "<p>USERS:</p>";
+        echo "<p>----------</p>";
+        foreach ($users as $user) {
+            echo "<p>$user->name |  $user->email</p>";
+        }
+    }
+);
+
+Route::post(
+    '/register_user', [
     'as' => 'register_user', 'uses' => 'UserController@postRegister'
-]);
+    ]
+);
