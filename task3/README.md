@@ -7,39 +7,67 @@ as long as he provides valid name/email.
   - All fields should be non-empty and in utf-8 encoding
   - Name and Email together must be unique
   - Email should have a valid form "mail@email.com"
-  - Name must not inlude numbers
+  - Name must not include numbers
 
 ## Dependencies:
   - Docker Engine  
     [Install Docker Engine](https://docs.docker.com/engine/installation/)
   - Docker Compose  
     [Install Docker Compose](https://docs.docker.com/compose/install/)
+  - Laravel  
+    [Install Laravel](https://laravel.com/docs/5.2/installation)
+  - Composer  
+    [Install Composer](https://getcomposer.org/doc/00-intro.md)
 
-## How to run
-Before every run change to the *task3/* directory and execute (*www/* has to be in your working directory)
+## How to setup and run
+#### Introduction
+Before every run, change to the *task3/* directory and execute (*www/* has to be in your working directory)
 ```
 $ chmod -R 777 www
 ```
-To begin the project go to the task3/ directory execute
+Also check any other docker containers that are running (in case of conflicts), by running
 ```
-$ docker-compose up -d
+$ docker ps
 ```
-If you get a port error associated with mysql, stop your local mysql server and then try again
-```
-$ sudo /etc/init.d/mysql stop
-```
-If you have problems with packages, go to the *www/* directory and execute
+#### Packages
+To start setting up the project packages go to the *www/* directory and execute
 ```
 $ composer update
 ```
-To stop the containers, go to the *task3/* directory and execute
+#### Database
+While setting up the database, if you get a port error associated with mysql, stop your local mysql server and then try again
+```
+$ sudo /etc/init.d/mysql stop
+```
+To setup the database go to the *task3/* directory and execute
+```
+$ docker-compose run artisan make:migration create_users_table
+```
+That should output the name of the created file <name_of_file> in the form 
+```
+Created Migration: ****_**_**_****_create_users_table
+```
+Then execute
+```
+$ cp www/database/migrations/2014_10_12_000000_create_users_table.php www/database/migrations/<name of file>
+$ chmod -R 777 www
+$ docker-compose run artisan migrate
+```
+#### Run and Stop project
+Now you can run the project by changing to the *task3/* directory and executing
+```
+$ chmod -R 777 www
+$ docker-compose up -d
+```
+The project can be found at [http://localhost](http://localhost)
+
+To stop the containers from running, go to the *task3/* directory and execute
 ```
 $ docker-compose stop
 ```
-
-## Unit tests
+#### Unit tests
 To run Unit tests with Behat, we execute Behat in the nginx container.  
-Execute
+After running the project, execute
 ```
 $ docker ps
 ```
