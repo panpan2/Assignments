@@ -29,9 +29,14 @@ Also check any other docker containers that are running (in case of conflicts), 
 ```
 $ docker ps
 ```
+It might be useful to use a root shell for setting up the project by executing
+```
+$ sudo -s
+```
 #### Packages
 To start setting up the project packages go to the *www/* directory and execute
 ```
+$ mkdir database
 $ composer update
 ```
 #### Database
@@ -43,11 +48,15 @@ To setup the database go to the *task3/* directory and execute
 ```
 $ mv database www/
 $ chmod -R 777 www
-$ docker-compose run artisan migrate
+$ docker-compose run artisan make:migration create_users_table
 ```
-In case you get a PDO Exception, execute
+That should output the name of the created file <name_of_file> in the form
 ```
-$ docker-compose stop
+Created Migration: ****_**_**_****_create_users_table
+```
+Then execute
+```
+$ mv www/database/migrations/2014_10_12_000000_create_users_table.php www/database/migrations/<name_of_file>
 $ docker-compose run artisan migrate
 ```
 #### Run and Stop project
