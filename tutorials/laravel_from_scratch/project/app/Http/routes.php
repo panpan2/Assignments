@@ -11,13 +11,6 @@
 |
 */
 
-//Route::get('/', function () {
-//    $people = ["o", "ma", "nq"];
-//    return view('welcome', compact('people'));
-//});
-//
-//Route::get('/about', function () {
-//    return view('pages.about');
-//});
+Route::get('cards', 'CardsController@index');
 
-Route::get('/', 'PageController@home');
+Route::get('cards/{card}', 'CardsController@show');
