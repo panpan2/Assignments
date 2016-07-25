@@ -41,16 +41,13 @@ $ sudo /etc/init.d/mysql stop
 ```
 To setup the database go to the *task3/* directory and execute
 ```
-$ docker-compose run artisan make:migration create_users_table
-```
-That should output the name of the created file <name_of_file> in the form 
-```
-Created Migration: ****_**_**_****_create_users_table
-```
-Then execute
-```
-$ cp www/database/migrations/2014_10_12_000000_create_users_table.php www/database/migrations/<name of file>
+$ mv database www/
 $ chmod -R 777 www
+$ docker-compose run artisan migrate
+```
+In case you get a PDO Exception, execute
+```
+$ docker-compose stop
 $ docker-compose run artisan migrate
 ```
 #### Run and Stop project
