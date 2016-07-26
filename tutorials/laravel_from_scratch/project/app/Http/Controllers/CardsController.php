@@ -10,14 +10,17 @@ class CardsController extends Controller
 {
     public function index()
     {
-        //$cards = DB::table('cards')->get();
         $cards = Card::all();
         return view('cards.index', compact('cards'));
     }
 
     public function show(Card $card)
     {
-        //$card = Card::find($id);
+        //$card->load('notes.user');
+        //return $card;
+
+        //$card = Card::with('notes.user')->find(2);
+        //return $card;
         return view('cards.show', compact('card'));
     }
 }
