@@ -21,4 +21,9 @@ Route::post('cards/{card}/notes', 'NotesController@store');
 Route::get('note/{note}/edit', 'NotesController@edit');
 
 Route::patch('note/{note}', 'NotesController@update');
+
+Route::auth();
+
+Route::get('/dashboard', 'HomeController@index');
+
 //});
