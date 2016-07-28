@@ -1,7 +1,7 @@
-# Task3 - Register User Application
+# Task4 - Extended "Register User" Application
 
 This is a simple web-application that registers a new user in a database
-as long as he provides valid name/email.
+as long as he provides valid name, email and phone number.
 
 ## Valid input
   - All fields should be non-empty and in utf-8 encoding
