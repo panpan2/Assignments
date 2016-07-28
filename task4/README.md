@@ -8,6 +8,7 @@ as long as he provides valid name/email.
   - Email must be unique
   - Email should have a valid form "mail@email.com"
   - Name must not include numbers
+  - Phone number should only include numbers
 
 ## Dependencies:
   - Docker Engine  
