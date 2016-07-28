@@ -22,7 +22,7 @@ as long as he provides valid name/email.
 
 ## How to setup and run
 #### Introduction
-Before every run, change to the *task3/* directory and execute (*www/* has to be in your working directory)
+Before every run, change to the *task4/* directory and execute (*www/* has to be in your working directory)
 ```
 $ chmod -R 777 www
 ```
@@ -45,7 +45,7 @@ While setting up the database, if you get a port error associated with mysql, st
 ```
 $ sudo /etc/init.d/mysql stop
 ```
-To setup the database go to the *task3/* directory and execute
+To setup the database go to the *task4/* directory and execute
 ```
 $ mv database www/
 $ chmod -R 777 www
@@ -61,14 +61,14 @@ $ mv www/database/migrations/2014_10_12_000000_create_users_table.php www/databa
 $ docker-compose run artisan migrate
 ```
 #### Run and Stop project
-Now you can run the project by changing to the *task3/* directory and executing
+Now you can run the project by changing to the *task4/* directory and executing
 ```
 $ chmod -R 777 www
 $ docker-compose up -d
 ```
 The project can be found at [http://localhost](http://localhost)
 
-To stop the containers from running, go to the *task3/* directory and execute
+To stop the containers from running, go to the *task4/* directory and execute
 ```
 $ docker-compose stop
 ```
