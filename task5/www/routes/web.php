@@ -11,6 +11,14 @@
 |
 */
 
+//Route::group(['prefix' => 'api/v1'], function() {
+//    Route::resource('users', 'UsersController');
+//});
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+
+Route::get('/thankyou', function () {
+    return view('thankyou');
 });
