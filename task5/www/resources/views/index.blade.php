@@ -18,25 +18,26 @@
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
 
         <!-- Load Angular resources -->
-        <!-- controller, service, application -->
-        <!-- <script src="js/app.js"></script> -->
+        <script src="js/app.js"></script>
+        <script src="js/controllers/userCtrl.js"></script>
+        <script src="js/services/userService.js"></script>
 
     </head>
-    <body class="container" ng-app="registerApp" ng-controller="UserController">
+    <body class="container" ng-app="registerApp" ng-controller="userController">
         <div class="col-md-8 col-md-offset-2">
 
             <form ng-submit="submitUser()">
 
                 <div class="form-group">
-                    Name: <input type="text" class="form-control input-lg" name="name" ng-model="userData.author">
+                    Name: <input type="text" class="form-control input-lg" name="name" ng-model="userData.name">
                 </div>
 
                 <div class="form-group">
-                    Email: <input type="email" class="form-control input-lg" name="email" ng-model="userData.text">
+                    Email: <input type="email" class="form-control input-lg" name="email" ng-model="userData.email">
                 </div>
 
                 <div class="form-group">
-                    Phone: <input type="tel" class="form-control input-lg" name="phone" ng-model="userData.text">
+                    Phone: <input type="tel" class="form-control input-lg" name="phone" ng-model="userData.phone">
                 </div>
 
 
@@ -45,7 +46,10 @@
                 </div>
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
             </form>
+            <div class="text-center" ng-show="submitSuccess">
+                <h1 id="thankyou">Thank you!</h1>
+                <p>You have sucessfully registered!</p>
+            </div>
         </div>
     </body>
 </html>
-
