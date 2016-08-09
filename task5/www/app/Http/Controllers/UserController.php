@@ -30,7 +30,7 @@ class UserController extends Controller
             $request, [
                 'name' => 'required|max:255|string|alpha',
                 'email' => 'required|unique:users,email|max:255|string|email',
-                'phone' => 'required|max:9999999999999|string|integer',
+                'phone' => 'required|max:9999999999999|string',
             ]
         );
 

@@ -1,0 +1,41 @@
+.error {
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-duration: .4s;
+    -moz-animation-duration: .4s;
+    -o-animation-duration: .4s;
+    animation-duration: .4s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: shake;
+    -moz-animation-name: shake;
+    -o-animation-name: shake;
+    animation-name: shake;
+}
+
+@-moz-keyframes shake {
+  0%, 100% { -moz-transform: translateX(0); }
+  30%, 60% { -moz-transform: translateX(-10px); }
+  40%, 80% { -moz-transform: translateX(10px); }
+}
+
+@-o-keyframes shake {
+  0%, 100% { -o-transform: translateX(0); }
+  30%, 60% { -o-transform: translateX(-10px); }
+  40%, 80% { -o-transform: translateX(10px); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  30%, 60% { transform: translateX(-10px); }
+  40%, 80% { transform: translateX(10px); }
+}
+@-webkit-keyframes shake {
+  0%, 100% { -webkit-transform: translateX(0); }
+  30%, 60% { -webkit-transform: translateX(-10px); }
+  40%, 80% { -webkit-transform: translateX(10px); }
+}
