@@ -11,7 +11,7 @@
 |
 */
 
-Route::group(['prefix' => 'api/v1'], function() {
+Route::group(['prefix' => 'api'], function() {
     Route::resource('users', 'UserController');
 });
 
