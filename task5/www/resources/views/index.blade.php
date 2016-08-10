@@ -35,7 +35,7 @@
     <body class="container" ng-app="registerApp" ng-controller="userController">
         <div class="col-md-8 col-md-offset-2">
 
-            <form name="userForm" ng-submit="submitUser()" novalidate>
+            <form name="userForm" ng-submit="submitUser()" ng-hide="submitSuccess" novalidate>
 
                 <div class="form-group" ng-class="{ 'error has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
                     Name: <input type="text" class="form-control input-lg" name="name" ng-model="userData.name" required ng-maxlength="255">
