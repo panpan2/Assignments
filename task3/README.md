@@ -38,15 +38,39 @@ To start setting up the project packages go to the *www/* directory and execute
 ```
 $ composer update
 ```
-#### Database
+#### Run and Stop project
+Now you can run the project by changing to the *task3/* directory and executing
+```
+$ chmod -R 777 www
+$ docker-compose up -d
+```
+**Warning!** The application is not ready yet. First check that the project is running at [http://localhost](http://localhost) and execute
+```
+$ docker-compose run artisan migrate:refresh
+```
+If it outputs a *[PDOException] Connection refused* re-execute
+```
+$ docker-compose run artisan migrate:refresh
+```
+to setup the database migration table
+To stop the containers from running, go to the *task3/* directory and execute
+```
+$ docker-compose stop
+```
+#### Database errors
 While setting up the database, if you get a port error associated with mysql, stop your local mysql server and then try again
 ```
 $ sudo /etc/init.d/mysql stop
 ```
+In case of database errors stop the container and follow the instructions below.
 To setup the database go to the *task3/* directory and execute
 ```
 $ chmod -R 777 www
 $ docker-compose run artisan migrate
+```
+If the response is "Nothing to migrate" execute
+```
+$ docker-compose run artisan migrate:refresh
 ```
 In case of some error message saying that the table exists execute
 ```
@@ -65,18 +89,6 @@ where <filename> is the file mentioned above(from migrate:rollback).
 Then try to reset the database, by going back to the *task3/* directory and executing
 ```
 $ docker-compose run artisan migrate:refresh
-```
-#### Run and Stop project
-Now you can run the project by changing to the *task3/* directory and executing
-```
-$ chmod -R 777 www
-$ docker-compose up -d
-```
-The project can be found at [http://localhost](http://localhost)
-
-To stop the containers from running, go to the *task3/* directory and execute
-```
-$ docker-compose stop
 ```
 #### Unit tests
 To run Unit tests with Behat, we execute Behat in the nginx container.  
