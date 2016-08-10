@@ -36,7 +36,6 @@ $ sudo -s
 #### Packages
 To start setting up the project packages go to the *www/* directory and execute
 ```
-$ mkdir database
 $ composer update
 ```
 #### Database
@@ -46,18 +45,26 @@ $ sudo /etc/init.d/mysql stop
 ```
 To setup the database go to the *task3/* directory and execute
 ```
-$ mv database www/
 $ chmod -R 777 www
-$ docker-compose run artisan make:migration create_users_table
-```
-That should output the name of the created file <name_of_file> in the form
-```
-Created Migration: ****_**_**_****_create_users_table
-```
-Then execute
-```
-$ mv www/database/migrations/2014_10_12_000000_create_users_table.php www/database/migrations/<name_of_file>
 $ docker-compose run artisan migrate
+```
+In case of some error message saying that the table exists execute
+```
+$ docker-compose run artisan migrate:rollback
+```
+That will output an error along with the name of a file <filename> in the form  
+```
+2016_XX_XX_XXXXXX_create_users_table
+```
+Execute
+```
+$ cd www/database/migrations
+$ mv 2016_07_31_094704_create_users_table.php <filename>.php
+```
+where <filename> is the file mentioned above(from migrate:rollback).  
+Then try to reset the database, by going back to the *task3/* directory and executing
+```
+$ docker-compose run artisan migrate:refresh
 ```
 #### Run and Stop project
 Now you can run the project by changing to the *task3/* directory and executing
