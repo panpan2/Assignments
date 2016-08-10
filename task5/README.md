@@ -37,19 +37,7 @@ $ sudo -s
 #### Packages
 To start setting up the project packages go to the *www/* directory and execute
 ```
-$ mkdir database
 $ composer update
-```
-#### Database
-While setting up the database, if you get a port error associated with mysql, stop your local mysql server and then try again
-```
-$ sudo /etc/init.d/mysql stop
-```
-To setup the database go to the *task5/* directory and execute
-```
-$ mv database www/
-$ chmod -R 777 www
-$ docker-compose run artisan migrate
 ```
 #### Run and Stop project
 Now you can run the project by changing to the *task5/* directory and executing
@@ -57,11 +45,51 @@ Now you can run the project by changing to the *task5/* directory and executing
 $ chmod -R 777 www
 $ docker-compose up -d
 ```
-The project can be found at [http://localhost](http://localhost)
-
+**Warning!** The application is not ready yet. First check that the project is running at [http://localhost](http://localhost) and execute
+```
+$ docker-compose run artisan migrate:refresh
+```
+If it outputs a *[PDOException] Connection refused* re-execute
+```
+$ docker-compose run artisan migrate:refresh
+```
+to setup the database migration table
 To stop the containers from running, go to the *task5/* directory and execute
 ```
 $ docker-compose stop
+```
+#### Database errors
+While setting up the database, if you get a port error associated with mysql, stop your local mysql server and then try again
+```
+$ sudo /etc/init.d/mysql stop
+```
+In case of database errors stop the container and follow the instructions below.
+To setup the database go to the *task5/* directory and execute
+```
+$ chmod -R 777 www
+$ docker-compose run artisan migrate
+```
+If the response is "Nothing to migrate" execute
+```
+$ docker-compose run artisan migrate:refresh
+```
+In case of some error message saying that the table exists execute
+```
+$ docker-compose run artisan migrate:rollback
+```
+That will output an error along with the name of a file <filename> in the form  
+```
+2016_XX_XX_XXXXXX_create_users_table
+```
+Execute
+```
+$ cd www/database/migrations
+$ mv 2016_07_31_094704_create_users_table.php <filename>.php
+```
+where <filename> is the file mentioned above(from migrate:rollback).  
+Then try to reset the database, by going back to the *task5/* directory and executing
+```
+$ docker-compose run artisan migrate:refresh
 ```
 #### Protractor tests
 Change to the *www/protractor/* directory.  
