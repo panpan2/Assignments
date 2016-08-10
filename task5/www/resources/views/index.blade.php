@@ -53,14 +53,14 @@
                 </div>
 
                 <div class="form-group text-right">
-                    <button type="submit" class="btn btn-primary btn-lg" ng-disabled="userForm.$invalid">Submit</button>
+                    <button type="submit" id="btn" class="btn btn-primary btn-lg" ng-disabled="userForm.$invalid">Submit</button>
                 </div>
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
             </form>
 
             <!-- Thank you message -->
-            <div class="text-center" ng-show="submitSuccess">
-                <h1 id="thankyou">Thank you!</h1>
+            <div class="text-center" ng-show="submitSuccess" id="thankyou">
+                <h1>Thank you!</h1>
                 <p>You have sucessfully registered!</p>
             </div>
 
