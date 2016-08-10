@@ -48,7 +48,7 @@ $ docker-compose up -d
 ```
 $ docker-compose run artisan migrate:refresh
 ```
-If it outputs a *[PDOException] Connection refused* re-execute
+If it outputs a *[PDOException] Connection refused* insist on executing
 ```
 $ docker-compose run artisan migrate:refresh
 ```
@@ -72,7 +72,11 @@ If the response is "Nothing to migrate" execute
 ```
 $ docker-compose run artisan migrate:refresh
 ```
-In case of some error message saying that the table exists execute
+If the response is "Refused to connect" insist on executing
+```
+$ docker-compose run artisan migrate
+```
+If the response is that the table exists
 ```
 $ docker-compose run artisan migrate:rollback
 ```
