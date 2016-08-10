@@ -1,3 +1,4 @@
+"use strict";
 angular.module('userCtrl', [])
     .controller('userController', function ($scope, $http, User) {
         $scope.submitSuccess = false;
@@ -13,7 +14,7 @@ angular.module('userCtrl', [])
 
         $scope.submitUser = function() {
             User.save($scope.userData)
-                .success(function(data) {
+                .success(function() {
                     console.log("Registered");
                     $scope.submitSuccess = true;
                 })
